@@ -11,7 +11,9 @@ function Book() {
     gender: '',
     phone: '',
     email: '',
-    identityProof: ''
+    identityProof: '',
+    checkin:"",
+    checkout:""
   });
 
   const handleChange = (e) => {
@@ -63,6 +65,10 @@ function Book() {
         <input type='email' name='email' placeholder='Your Email Id' className='book' onChange={handleChange} value={data.email} />
         <h3>Proof of Identity:</h3>
         <input type='text' name='identityProof' placeholder='Your adhaar No.' className='book' onChange={handleChange} value={data.identityProof}/>
+        <h3>CheckIn: </h3>
+        <input type='date' name='checkin'  className='book' onChange={handleChange} value={data.checkin}/>
+        <h3>CheckOut:  </h3>
+        <input type='date' name='checkout'  className='book' onChange={handleChange} value={data.checkout}/>
         <br />
         <br />
         <button type='submit'style={{ fontSize: '20px' }}>Submit</button>
