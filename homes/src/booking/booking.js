@@ -87,7 +87,7 @@ function Book() {
         <h3>CheckOut:  </h3>
         <input type='date' name='checkout'  className='book' onChange={handleChange} value={data.checkout}/>
         <h3>Tier:  </h3>
-        <input type='text' name='tier'  className='book' onChange={handleChange} value={data.checkout}/>
+        <input type='text' name='tier'  className='book' onChange={handleChange} value={data.tier}/>
         <br />
         <br />
         <button type='submit'style={{ fontSize: '20px' }}>Submit</button>
