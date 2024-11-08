@@ -13,7 +13,8 @@ function Book() {
     email: '',
     identityProof: '',
     checkin:"",
-    checkout:""
+    checkout:"",
+    tier:""
   });
 
   const handleChange = (e) => {
@@ -25,6 +26,22 @@ function Book() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setData(
+     {
+      id: '',
+      firstName: '',
+      middleName: '',
+      lastName: '',
+      dob: '',
+      gender: '',
+      phone: '',
+      email: '',
+      identityProof: '',
+      checkin:"",
+      checkout:"",
+      tier:""
+     }
+    )
     // Send the data to the backend via a POST request
  try {
      const response = await fetch('/booking', {
@@ -69,6 +86,8 @@ function Book() {
         <input type='date' name='checkin'  className='book' onChange={handleChange} value={data.checkin}/>
         <h3>CheckOut:  </h3>
         <input type='date' name='checkout'  className='book' onChange={handleChange} value={data.checkout}/>
+        <h3>Tier:  </h3>
+        <input type='text' name='tier'  className='book' onChange={handleChange} value={data.checkout}/>
         <br />
         <br />
         <button type='submit'style={{ fontSize: '20px' }}>Submit</button>
